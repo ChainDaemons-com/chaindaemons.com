@@ -1,110 +1,154 @@
-<h1 align=center>Bookworm Light Nextjs</h1> 
-<p align=center>Bookworm Light is a minimal multi-author free nextjs blog template. This highly customizable theme is ideal for creating any type of blog website, including food, recipes, beauty, lifestyle, photography, travel, health, fitness, and more.</p>
-<h2 align="center"> <a target="_blank" href="https://booworm-light-nextjs.vercel.app/" rel="nofollow">Demo</a> | <a  target="_blank" href="https://pagespeed.web.dev/report?url=https%3A%2F%2Fbookworm-light-nextjs.vercel.app%2F&form_factor=desktop">Page Speed (100%)</a>
-</h2>
+# [Start Bootstrap - Clean Blog Jekyll](https://startbootstrap.com/themes/clean-blog-jekyll/) - Official Jekyll Version
 
+[Clean Blog Jekyll](https://startbootstrap.com/themes/clean-blog-jekyll/) is a stylish, responsive blog theme for [Bootstrap](https://getbootstrap.com/) created by [Start Bootstrap](https://startbootstrap.com/). This theme features a blog homepage, about page, contact page, and an example post page along with a working contact form powered by [Formspree](https://formspree.io/).
 
+This repository holds the official Jekyll version of the Clean Blog theme on Start Bootstrap!
 
-<p align=center>
-  <a href="https://github.com/vercel/next.js/releases/tag/v13.0.6" alt="Contributors">
-    <img src="https://img.shields.io/static/v1?label=NEXTJS&message=13.0&color=000&logo=nextjs" />
-  </a>
+## Preview
 
-  <a href="https://github.com/themefisher/bookworm-light-nextjs/blob/main/LICENSE">
-    <img src="https://img.shields.io/github/license/themefisher/bookworm-light-nextjs" alt="license"></a>
+[![Clean Blog (Jekyll) Preview](https://startbootstrap.com/assets/img/screenshots/themes/clean-blog-jekyll.png)](http://StartBootstrap.github.io/startbootstrap-clean-blog-jekyll/)
 
-  <img src="https://img.shields.io/github/languages/code-size/themefisher/bookworm-light-nextjs" alt="code size">
+**[View Live Preview](http://StartBootstrap.github.io/startbootstrap-clean-blog-jekyll/)**
 
-  <a href="https://github.com/themefisher/bookworm-light-nextjs/graphs/contributors">
-    <img src="https://img.shields.io/github/contributors/themefisher/bigspring-light-nextjs" alt="contributors"></a>
-</p>
+## Installation & Setup
 
-![bookworm-light](https://demo.gethugothemes.com/thumbnails/bookworm-light.png)
+### Using RubyGems
 
-👉🏻[View Live Preview](https://bookworm-light-nextjs.vercel.app/)
+When installing the theme using RubyGems, demo images, posts, and pages are not included. Follow the instructions below for complete setup.
 
-<!-- download -->
-## Download
+1. (Optional) Create a new Jekyll site: `jekyll new my-site`
+2. Replace the current theme in your `Gemfile` with `gem "jekyll-theme-clean-blog"`.
+3. Install the theme (run the command inside your site directory): `bundle install`
+4. Replace the current theme in your `_config.yml` file with `theme: jekyll-theme-clean-blog`.
+5. Build your site: `bundle exec jekyll serve`
 
-Download this template from [Github](https://github.com/themefisher/bookworm-light-nextjs/archive/main.zip)
+Assuming there are no errors and the site is building properly, follow these steps next:
 
-## Key Features
-- Multi-Author support
-- Google Page Speed score 100! (Desktop)
-- Supports Contact Form
-- Search Functionality
-- Semantic HTML Document Structure
-- Custom Logo Support
-- Includes All SCSS Files
-- Image Optimized With Next/image
+1. Create the following pages if they do not exist already (or change the extension of existing markdown files from `.md` to `.html`):
 
-<!-- installation -->
-## Installation
+   * `index.html` - set to `layout: home`
+   * `about.html` - set to `layout: page`
+   * `contact.html` - set to `layout: page`
+   * `posts/index.html` - set to `layout: page` (you will also need to create a `posts` directory)
 
-After downloading the template, you have some prerequisites to install. Then you can run it on your localhost. You can view the package.json file to see which scripts are included.
+2. Configure the `index.html` front matter. Example:
 
-### Install prerequisites (once for a machine)
+    ```markdown
+    ---
+    layout: home
+    background: '/PATH_TO_IMAGE'
+    ---
+    ```
 
-* **Node Installation:** [Install node js](https://nodejs.org/en/download/) [Recommended LTS version]
+3. Configure the `about.html`, `contact.html`, and `posts/index.html` front matter. Example:
 
-### Local setup
+    ```markdown
+    ---
+    layout: page
+    title: Page Title
+    description: This is the page description.
+    background: '/PATH_TO_IMAGE'
+    ---
+    ```
 
-After successfully installing those dependencies, open this template with any IDE [[VS Code](https://code.visualstudio.com/) recommended], and then open the internal terminal of IDM [vs code shortcut <code>ctrl/cmd+\`</code>]
+4. For each post in the `_posts` directory, update the front matter. Example:
 
-* Install dependencies
+    ```markdown
+    ---
+    layout: post
+    title: "Post Title"
+    subtitle: "This is the post subtitle."
+    date: YYYY-MM-DD HH:MM:SS
+    background: '/PATH_TO_IMAGE'
+    ---
+    ```
 
-```
-npm install
-```
+    For reference, look at the [demo repository](https://github.com/StartBootstrap/startbootstrap-clean-blog-jekyll) to see how the files are set up.
 
-* Run locally
+5. Add the form to the `contact.html` page. Add the following code to your `contact.html` page:
 
-```
-npm run dev
-```
+    ```html
+    <form name="sentMessage" id="contactForm" novalidate>
+      <div class="control-group">
+        <div class="form-group floating-label-form-group controls">
+          <label>Name</label>
+          <input type="text" class="form-control" placeholder="Name" id="name" required data-validation-required-message="Please enter your name.">
+          <p class="help-block text-danger"></p>
+        </div>
+      </div>
+      <div class="control-group">
+        <div class="form-group floating-label-form-group controls">
+          <label>Email Address</label>
+          <input type="email" class="form-control" placeholder="Email Address" id="email" required data-validation-required-message="Please enter your email address.">
+          <p class="help-block text-danger"></p>
+        </div>
+      </div>
+      <div class="control-group">
+        <div class="form-group col-xs-12 floating-label-form-group controls">
+          <label>Phone Number</label>
+          <input type="tel" class="form-control" placeholder="Phone Number" id="phone" required data-validation-required-message="Please enter your phone number.">
+          <p class="help-block text-danger"></p>
+        </div>
+      </div>
+      <div class="control-group">
+        <div class="form-group floating-label-form-group controls">
+          <label>Message</label>
+          <textarea rows="5" class="form-control" placeholder="Message" id="message" required data-validation-required-message="Please enter a message."></textarea>
+          <p class="help-block text-danger"></p>
+        </div>
+      </div>
+      <br>
+      <div id="success"></div>
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary" id="sendMessageButton">Send</button>
+      </div>
+    </form>
+    ```
 
-After that, it will open up a preview of the template in your default browser, watch for changes to source files, and live-reload the browser when changes are saved.
+    Make sure you have the `email` setting in your `_config.yml` file set to a working email address! Once this is set, fill out the form and then check your email, verify the email address using the link sent to you by Formspree, and then the form will be working!
 
-## Production Build
+6. Build your site: `bundle exec jekyll serve`
 
-After finishing all the customization, you can create a production build by running this command.
+### Using Core Files
 
-```
-npm run build
-```
+When using the core files, the demo images, posts, and pages are all included with the download. After following the instructions below, you can then go and change the content of the pages and posts.
 
-<!-- reporting issue -->
-## Reporting Issues
+1. [Download](https://github.com/StartBootstrap/startbootstrap-clean-blog-jekyll/archive/master.zip) or Clone the repository.
+2. Update the following configuration settings in your `_config.yml` file:
 
-We use GitHub Issues as the official bug tracker for this Template. Please Search [existing issues](https://github.com/themefisher/bookworm-light-nextjs/issues). It’s possible someone has already reported the same problem.
-If your problem or idea has not been addressed yet, feel free to [open a new issue](https://github.com/themefisher/bookworm-light-nextjs/issues).
+    * `baseurl`
+    * `url`
+    * `title`
+    * `email` (after setting this setting to a working email address, fill out the form on the contact page and send it - then check your email and verify the address and the form will send you messages when used)
+    * `description`
+    * `author`
+    * `twitter_username` (Optional)
+    * `facebook_username` (Optional)
+    * `github_username` (Optional)
+    * `linkedin_username` (Optional)
+    * `instagram_username` (Optional)
 
-<!-- support -->
-## Technical Support or Questions (Paid)
+3. Build your site: `bundle exec jekyll serve`
 
-If you have questions or need help integrating the product please [contact us](https://themefisher.com/contact) instead of opening an issue.
+## Bugs and Issues
 
-<!-- licence -->
-## License
+Have a bug or an issue with this template? [Open a new issue](https://github.com/StartBootstrap/startbootstrap-clean-blog-jekyll/issues) here on GitHub!
 
-Copyright (c) 2016 - Present, Designed & Developed by [Themefisher](https://themefisher.com)
+## About
 
-**Code License:** Released under the [MIT](https://github.com/themefisher/bookworm-light-nextjs/blob/main/LICENSE) license.
+Start Bootstrap is an open source library of free Bootstrap templates and themes. All of the free templates and themes on Start Bootstrap are released under the MIT license, which means you can use them for any purpose, even for commercial projects.
 
-**Image license:** The images are only for demonstration purposes. They have their license, we don't have permission to share those images.
+* <https://startbootstrap.com>
+* <https://twitter.com/SBootstrap>
 
-## Hire Us
+Start Bootstrap was created by and is maintained by **[David Miller](http://davidmiller.io/)**.
 
-Besides developing unique, blazing-fast Nextjs templates, we also provide customized services. We specialize in creating affordable, high-quality static websites based on Nextjs.
+* <http://davidmiller.io>
+* <https://twitter.com/davidmillerhere>
+* <https://github.com/davidtmiller>
 
-If you need to customize the theme or complete website development from scratch, you can hire us. **Check Our
-[Contact Page](https://themefisher.com/contact)**
+Start Bootstrap is based on the [Bootstrap](https://getbootstrap.com/) framework created by [Mark Otto](https://twitter.com/mdo) and [Jacob Thorton](https://twitter.com/fat).
 
-## Nextjs Templates By Us
+## Copyright and License
 
-<a href="https://themefisher.com/products/bigspring-light-nextjs">
-<img src="https://demo.gethugothemes.com/thumbnails/bigspring.png" height="300" width="400"/>
-<p>Bigspring Light Nextjs</p>
-</a>
-
-
+Copyright 2013-2021 Start Bootstrap LLC. Code released under the [MIT](https://github.com/StartBootstrap/startbootstrap-clean-blog-jekyll/blob/master/LICENSE) license.
